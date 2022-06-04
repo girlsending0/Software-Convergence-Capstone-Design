@@ -215,7 +215,7 @@ for b in band:
 * Betweenness Centrality Theta Band PO4 Channel
 ![READMEimge2](https://user-images.githubusercontent.com/83329561/171998762-fdd28695-0d62-4954-a422-544545b64fb2.png)
 * Eigenvector Centraltity Gamma Band O1 Channel:
-![READMEimage3](https://user-images.githubusercontent.com/83329561/171998766-42704b45-2e1b-4961-aed2-73057345bb71.png)
+![READMEimage3](https://user-images.githubusercontent.com/83329561/171999054-099de194-15d2-4b8f-812d-576298b112c9.png)
 
 # Data Acquisition
 이 연구는 [1]의 저자에게 요청 후 데이터를 획득받아 수행되었습니다.
