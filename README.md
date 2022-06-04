@@ -18,5 +18,32 @@
  * Machine Learning / Deep Learning 을 적용한 감정 인식 알고리즘을 개발하고자 한다. 이미 Yu, Minchan [1]에서 SVM 분류기를 통해 73.77%의 정확도로 알고리즘이 개발 된 바 있지만, 해당 논문에서 사용하지 않은 분석 기법을 활용하여 제시된 정확도 보다 높은 알고리즘을 개발하는 것을 목표로 한다.  
 
 # Method
+![READMEimage](https://user-images.githubusercontent.com/83329561/171995177-5e927e4f-9ec7-4b7f-ae82-54b0dcfcfd79.png)
+(a): 1000Hz EEG신호 채널별 시각화  
+(b): Mscoherence를 통한 Network Map 계산 (59 X 59), 이후 6가지 주파수 대역으로 Filtering  
+> * Delta: 0.5-4 Hz  
+> * Theta: 4-8 Hz  
+> * Alpha: 8-13 Hz  
+> * Beta: 13-30 Hz  
+> * Gamma: 30-49 Hz  
+> * High Gamma: 50-80 Hz  
 
+(c): Mst Algorithm을 이용하여 Undirect binary Matrix로 변환  
+(d): 그래프 이론 값들을 이용하여 Functional Connectivity Network Feature 계산  
+> * Global Measure : Small-Worldness, Characteristic Path Length, Global Efficiency  
+> * Local Measure : Clustering Coefficient, Local Efficiency, Eigenvector Centrality, Betweenness Centrality, Node Degree  
+
+(e): ANOVA Test, Gameshowell 통계분석을 통한 유의미한 (* : P<0.05, ** : P<0.01, *** : P<0.001) 채널 도출 및 T-value Head Topologymap Visualization
+
+# Main Code
+
+# Result
+
+# Conclusion
+
+# Data Acquisition
+이 연구는 [1]의 저자에게 요청 후 데이터를 획득받아 수행되었습니다.
+
+# Reference
+[1]: Yu, Minchang, et al. "EEG-based emotion recognition in an immersive virtual reality environment: From local activity to brain network features."Biomedical Signal Processing and Control72 (2022): 103349.
 
