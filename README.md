@@ -212,12 +212,15 @@ for b in band:
 * 물론 Neg, Pos와 비교하여 높고 낮음에는 지역적인 부분마다 다르지만, Pos-Neu에 비해 유의한 노드가 많이 나옴
 
 ### 3-valence (Positive, Neutral, Negative) comparison에서 모두 유의한 결과(P<0.05) 가 도출된 채널
-* Betweenness Centrality Theta Band PO4 Channel
+* Betweenness Centrality Theta Band PO4 Channel (Local measure)
 ![READMEimge2](https://user-images.githubusercontent.com/83329561/171998762-fdd28695-0d62-4954-a422-544545b64fb2.png)
-* Eigenvector Centraltity Gamma Band O1 Channel:
+* Eigenvector Centraltity Gamma Band O1 Channel (Local measure)
 ![READMEimage3](https://user-images.githubusercontent.com/83329561/171999054-099de194-15d2-4b8f-812d-576298b112c9.png)
 
 ### Global Efficiency로 도출된 유의한 채널 (P<0.05)
+* Global Efficiency (Global measure)
+![GE_git](https://user-images.githubusercontent.com/83329561/172739002-9ba87daa-4214-4b9a-aba5-8a11b567f6df.png)
+pairwise 및 Gameshowell 사후분석
 
 # Data Acquisition
 이 연구는 [1]의 저자에게 요청 후 데이터를 획득받아 수행되었습니다.
