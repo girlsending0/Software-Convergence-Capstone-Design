@@ -17,6 +17,11 @@
  * VREED EEG signal의 Connectivity Network Analysis 기법을 통해 감정(Positive/Neutral/Negative)에 따른 뇌의 활성화 부위 해석 및 인사이트 도출을 목표로 한다.
  * Machine Learning / Deep Learning 을 적용한 감정 인식 알고리즘을 개발하고자 한다. 이미 Yu, Minchan [1]에서 SVM 분류기를 통해 73.77%의 정확도로 알고리즘이 개발 된 바 있지만, 해당 논문에서 사용하지 않은 분석 기법을 활용하여 제시된 정확도 보다 높은 알고리즘을 개발하는 것을 목표로 한다.  
 
+> ### Expected Effect
+* 2D Display에 기반한 연구와 실제상황(3D)은 알려진 EEG Dynamics의 차이점을 고려할 때 차이가 있을 수 있다. 본 연구에서는 가상현실에서 MIP로 유도된 EEG DATA를 활용하여 2D display와 3D VR 간의 차이나 공통점을 설명할 수 있다.   
+* VR상황에서 측정된 EEG 신호를 Machine learning, Deep Learning 기법을 통해 2D환경에서 개발된 감정 분류 모델에 비해 실제적용에 더 유리한 모델을 만들 수 있다.  
+* HCI기술을 적용할 수 있는 여러 분야(의식 장애 환자의 감정 상태를 모니터링, 컴퓨터 게임 및 원격 교육)에서 감정 분류 알고리즘을 활용한 기술 개발을 기대할 수 있다.
+
 # Method
 ![READMEimage](https://user-images.githubusercontent.com/83329561/171995177-5e927e4f-9ec7-4b7f-ae82-54b0dcfcfd79.png)
 (a): 1000Hz EEG신호 채널별 시각화  
@@ -204,12 +209,13 @@ for b in band:
     
 ```
 
-# Result
+# Result 
 * Theta 밴드의 (Occipital) 지역에서 부정적 감정이 중립적, 긍정적 감정보다 낮았음 ==> Poz 채널
 * Graph Measure(C.C , B.C …) 방법 중 Node Degree에서 유의한 노드가 가장 많이 검출되었음 ==> 분류 성능이 높을 것으로 예상
 * Gamma 밴드의 (Central) 지역에서 부정적 감정이 중립적, 긍정적 감정보다 높았음 ==> CP5 채널
 * 전반적으로 부정과 관련된 비교(Neg-Neu, Neg-Pos)에서 유의한 노드가 많이 검출 
-* 물론 Neg, Pos와 비교하여 높고 낮음에는 지역적인 부분마다 다르지만, Pos-Neu에 비해 유의한 노드가 많이 나옴
+* 물론 Neg, Pos와 비교하여 높고 낮음에는 지역적인 부분마다 다르지만, Pos-Neu에 비해 유의한 노드가 많이 나옴  
+* High Gamma 대역의 Global Efficiency (Global measure) 에서 Negative-Neutral의 유의한 차이 도출 (P<0.05)  
 
 ### 3-valence (Positive, Neutral, Negative) comparison에서 모두 유의한 결과(P<0.05) 가 도출된 채널
 * Betweenness Centrality Theta Band PO4 Channel (Local measure)
@@ -224,7 +230,10 @@ for b in band:
 * pairwise 및 Gameshowell 사후분석 결과 표  
 ![Table1_git](https://user-images.githubusercontent.com/83329561/172740347-f9d41876-1683-40b2-9904-88658991f913.png)  
 
-> HighGamma대역에서 통계적으로 유의한 Negative > Netral 결과 도출
+> HighGamma대역에서 통계적으로 유의한 Negative > Netral 결과 도출  
+
+# Future Work
+현재 그래프 이론 기법을 활용하여 결과를 도출했지만, 센서 지역, 즉 뇌의 영역간 차이와 의미에 대한 인사이트를 도출해야 한다. 해당 부분에 대해 연구를 더 진행할 예정이다.
 
 # Data Acquisition
 이 연구는 [1]의 저자에게 요청 후 데이터를 획득받아 수행되었습니다.
